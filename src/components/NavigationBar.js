@@ -20,7 +20,7 @@ const Styles = styled.div`
     right: 25%;
   }
   .Navbar__brand-logo{
-    margin-right: 0.5rem;
+    margin-right: 0.7rem;
     width: 12%;
   }
 `;

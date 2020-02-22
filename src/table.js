@@ -19,8 +19,8 @@ const table = () => {
   const [api, setApi] = useState([]);
 
   useEffect(() => {
-      // fetch('http://104.248.53.140/SeverPost.php')
-      fetch('http://localhost:8000/')
+      fetch('http://104.248.53.140/SeverPost.php')
+      // fetch('http://localhost:8000/')
         .then((response) => response.json())
         .then((data) => setApi(data));
     }, []);

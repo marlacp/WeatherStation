@@ -59,7 +59,7 @@ render(){
         <React.Fragment>
             <div onSubmit={this.handleSubmit} >
 
-                <h5 className="styleInfo">Weather Data UsoChicamocha</h5>
+                <h5 className="styleInfo">Weather Data Usochicamocha</h5>
 
                 <div class="containerCheck">
 
