@@ -2,6 +2,7 @@ import React from 'react';
 import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
 import styled from 'styled-components';
 import logo from '../assets/statics/Logo.PNG';
+import { Link } from 'react-router-dom';
 
 const Styles = styled.div`
   .navbar { background-color: #79bac1; }
@@ -23,6 +24,10 @@ const Styles = styled.div`
     margin-right: 0.7rem;
     width: 12%;
   }
+  .Pad{
+
+    padding: 0 10px;
+  }
 `;
 
 export const NavigationBar = () => (
@@ -36,10 +41,30 @@ export const NavigationBar = () => (
       </Form> */}
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item> 
-          <Nav.Item><Nav.Link href="/table">latestData</Nav.Link></Nav.Item>
-          <Nav.Item><Nav.Link href="/Chart">Chart</Nav.Link></Nav.Item>
-          <Nav.Item><Nav.Link href="/Alltable">Table</Nav.Link></Nav.Item>
+          <Nav.Item className="Pad">
+            <Link to="/">
+              Home
+            </Link>
+          </Nav.Item> 
+
+          <Nav.Item className="Pad">
+            <Link to="/table">
+              latestData
+            </Link>
+          </Nav.Item>
+
+          <Nav.Item className="Pad">
+            <Link to="/Chart">
+              Chart
+            </Link>
+          </Nav.Item>
+
+          <Nav.Item className="Pad">
+            <Link to="/Alltable">
+              Table
+            </Link>
+          </Nav.Item>
+
         </Nav>
       </Navbar.Collapse>
     </Navbar>
