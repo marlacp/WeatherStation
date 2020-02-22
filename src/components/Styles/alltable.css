@@ -1,0 +1,29 @@
+/* .dtHorizontalVerticalExampleWrapper { */
+    /* overflow: auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y:hidden; */
+    /* cambia eso! *
+    
+    /* max-width: 600px
+    margin: 0 auto; */
+    /* overflow:scroll;
+    height:200px;
+    width:500px; */
+    /* } */
+    /* no espacios en la tabla */
+    #dtHorizontalVerticalExample th, td {
+    white-space: nowrap;
+    /* position: fixed */
+    }
+    .tableFixHead          { overflow-y: auto; height: 550px; }
+    .tableFixHead thead th { position: sticky; top: 0; }
+    
+    /* Just common table stuff. Really. */
+    table  { border-collapse: collapse; width: 100%; }
+    th, td { padding: 8px 16px; }
+    th     { background:#eee; }
+
+
