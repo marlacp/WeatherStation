@@ -24,8 +24,8 @@ const Styles = styled.div`
     margin-right: 0.7rem;
     width: 12%;
   }
-  .Pad{
-
+  .Pad a{
+    text-decoration: none;
     padding: 0 10px;
   }
 `;

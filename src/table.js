@@ -50,9 +50,9 @@ const table = () => {
                 <th scope="col">Date Time (YYYY-MM-DD hh:mm:ss)</th>
                 <th scope="col">Temperature (°C)</th>
                 <th scope="col">RH (%)</th>
-                <th scope="col">Radiation (KW/m2)</th>
+                <th scope="col">Radiation (kW/m^2)</th>
                 <th scope="col">Wind D (°)</th>
-                <th scope="col">Wind S (°)</th>
+                <th scope="col">Wind S (km/h)</th>
                 <th scope="col">Rain (mm)</th>
                 <th scope="col">ET daily (ET)</th>
                 <th scope="col">Rain daily (mm)</th>

@@ -293,7 +293,7 @@ render(){
             // 4 yAxis
             gridLineWidth: 0,
             title: {
-                text: 'Radiation (KW/m2)',
+                text: 'Radiation (kW/m^2)',
                 style: {
                     color: Highcharts.getOptions().colors[1]
                 }
@@ -309,7 +309,7 @@ render(){
             // 5 yAxis
             gridLineWidth: 0,
             title: {
-                text: 'Wind (°)',
+                text: 'Wind_D (°)',
                 style: {
                     color: Highcharts.getOptions().colors[1]
                 }
@@ -355,7 +355,24 @@ render(){
                 }
             },
             opposite: true
-        }
+        },
+        { 
+            // 8 yAxis
+            gridLineWidth: 0,
+            title: {
+                text: 'Wind_S (km/h)',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            labels: {
+                format: '{value}',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            opposite: true
+        },
 
 
         
@@ -433,7 +450,7 @@ render(){
             },
             dashStyle: 'shortdot',
             tooltip: {
-                valueSuffix: 'KW/m2'
+                valueSuffix: 'kW/m^2'
             }
     
         },
@@ -455,7 +472,7 @@ render(){
         {
             name: 'Wind S',
             type: 'spline',
-            yAxis: 5,
+            yAxis: 8,
     
             data: Wind_S,
             marker: {
@@ -463,7 +480,7 @@ render(){
             },
             dashStyle: 'shortdot',
             tooltip: {
-                valueSuffix: 'm/s'
+                valueSuffix: 'km/h'
             }
     
         }, {
