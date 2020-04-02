@@ -9,6 +9,7 @@ import  table  from './table';
 import Alltable  from './Alltable';
 import Sidebar from './components/Sidebar';
 import Chart from './Chart';
+import  ChartTable from './Chart-Table';
 
 function App() {
   return (
@@ -16,13 +17,12 @@ function App() {
       <Router>
         <NavigationBar />
 
-        <Sidebar />
 
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/table" component={table} />
-          <Route path="/Chart" component={Chart} />
-          <Route component={Alltable} />
+          {/* <Route path="/Chart" component={Chart} /> */}
+          <Route path="/Chart-table/:hour" component={ChartTable} />
         </Switch>
       </Router>
     </React.Fragment>

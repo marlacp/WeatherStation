@@ -614,7 +614,6 @@ render(){
 
     return(
         <React.Fragment>
-
             <HighchartsReact highcharts={Highcharts} options={options} />                
 
         </React.Fragment>

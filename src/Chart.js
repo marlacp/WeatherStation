@@ -8,30 +8,12 @@ import CompChart from './components/Component_Chart.js';
   class Chart extends React.Component{
 
     state = {
-        data:{},
+        data:'',
         loading: true,
         error: '',
         AxisY: {},
     };
     
-    componentDidMount() {
-        this.fetchData();
-
-    }
-
-    fetchData = async () => {
-        this.setState({loading: true, error: null})
-
-        try{
-            // var response = await fetch('http://localhost:8000/');
-            var response = await fetch('http://104.248.53.140/SeverPost.php');
-            var data = await response.json();
-            this.setState({loading: false, data: data});
-
-        } catch (error){
-            this.setState({ loading:false, error: error});
-        }
-    }
 
     handleClickApply = (yaxis) => {
         this.setState({
@@ -44,21 +26,40 @@ import CompChart from './components/Component_Chart.js';
 
 
       render(){
+        var datadic = {};
+        datadic = (this.props.data);
+        if (datadic === null){
+            return null;
+          }
+
+
+        var Yaxis2 = (this.props.Yaxis);
+        // var DateTime = [];
+        
+        if (datadic === null){
+            return null;
+        }
+
+        if (Yaxis2 === null){
+            return null;
+        }
     
           return(
-            <React.Fragment>
-              <div className='espacio container ' >
-                 <CompChart 
-                    datos = {this.state.data}
-                    Yaxis = {this.state.AxisY}
-                 /> 
-                  {/* <h1>Hola soy una grafica</h1> */}
-                    <Checkbox 
-                        handleClickApply = {this.handleClickApply}
-                    />
+              <h1>hola</h1>
+    
+        //     <React.Fragment>
+        //       <div className='espacio container ' >
+        //          <CompChart 
+        //             datos = {this.state.data}
+        //             Yaxis = {this.state.AxisY}
+        //          /> 
+        //           {/* <h1>Hola soy una grafica</h1> */}
+        //             <Checkbox 
+        //                 handleClickApply = {this.handleClickApply}
+        //             />
 
-              </div>
-           </React.Fragment>
+        //       </div>
+        //    </React.Fragment>
           );
       }
 

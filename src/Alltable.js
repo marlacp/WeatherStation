@@ -1,34 +1,23 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable react/jsx-no-comment-textnodes */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import './components/Styles/alltable.css';
-import { CSVLink, CSVDownload } from "react-csv";
+import { CSVLink } from "react-csv";
 const Wrapper = styled.div`
   margin-top: 1em;
   margin-left: 6em;
   margin-right: 6em;
 `;
-const Alltable = () => {
 
-  const [api, setApi] = useState([]);
-
-  useEffect(() => {
-      // fetch('http://localhost:8000/')
-      fetch('http://104.248.53.140/SeverPost.php')
-        .then((response) => response.json())
-        .then((data) => setApi(data));
-    }, []);
-
-
-  // console.log('api',api.length);
-  // var dataDir = {};
-  var u = 0;
-    if (api.length> 0){
-      u = (api.length -1);
-      console.log('api',api[u]["user"])
+class Alltable extends React.Component{
+  render (){
+    var api = {};
+    api = (this.props.data);
+    if (api === null){
+      return null;
     }
- 
+
     var headers = [
 
       { label: "Latitude", key: "Latitude" },
@@ -50,10 +39,12 @@ const Alltable = () => {
       { label: "Seedtime (YYYY-MM-DD hh:mm:ss)", key: "Seedtime" },
     ];
 
-    // console.log('dataDir',u)
-  return (
-      <Wrapper>
+    return(
+      <React.Fragment>
+              <Wrapper>
+      <h4 className='containerSectionButtons titulo'>Data</h4>
       <div className="GridWrapper scrollable tableFixHead">
+      
         { api.length >0 && (
           // eslint-disable-next-line react/style-prop-object
           // <table className="table table-bordered text-center" > 
@@ -125,7 +116,11 @@ const Alltable = () => {
         )}
        </div>
       </Wrapper>
-  );
-};
+      </React.Fragment>
+    );
+  }
+}
+
+
 export default Alltable;
 

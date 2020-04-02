@@ -38,8 +38,8 @@ class SideNav extends React.Component {
                    key: 3
                 },
                 {
-                  path: '/Alltable',
-                  name: 'Alltable',
+                  path: '/Chart-table/1',
+                  name: 'Chart-table',
                   css: 'fas fa-database',
                   key: 4
                 },

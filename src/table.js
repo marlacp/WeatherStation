@@ -19,8 +19,8 @@ const table = () => {
   const [api, setApi] = useState([]);
 
   useEffect(() => {
-      fetch('http://104.248.53.140/SeverPost.php')
-      // fetch('http://localhost:8000/')
+      fetch('http://104.248.53.140/SeverGet.php/?hour=8064')
+      // fetch('http://localhost:8000/?hour=8064')
         .then((response) => response.json())
         .then((data) => setApi(data));
     }, []);
@@ -37,8 +37,12 @@ const table = () => {
 
     // console.log('dataDir',u)
   return (
-      // <GridWrapper>
+      <div>
+
+      <div>  <h4 className='titulo'>Latest data</h4></div>
+
       <div className="GridWrapper scrollable">
+       
         { api.length >0 && (
           // eslint-disable-next-line react/style-prop-object
           <table className="table table-bordered text-center" > 
@@ -101,7 +105,7 @@ const table = () => {
             </table>
           )}
       </div>
-      // </GridWrapper>
+      </div>
   );
 };
 export default table;

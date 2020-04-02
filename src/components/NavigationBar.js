@@ -53,15 +53,15 @@ export const NavigationBar = () => (
             </Link>
           </Nav.Item>
 
-          <Nav.Item className="Pad">
+          {/* <Nav.Item className="Pad">
             <Link to="/Chart">
               Chart
             </Link>
-          </Nav.Item>
+          </Nav.Item> */}
 
           <Nav.Item className="Pad">
-            <Link to="/Alltable">
-              Table
+            <Link to="/Chart-table/1">
+              Chart and Table
             </Link>
           </Nav.Item>
 
