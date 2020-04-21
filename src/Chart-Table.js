@@ -72,7 +72,8 @@ class ChartTable extends React.Component {
     // if (this.state.error) {
     //   return <PageError error={this.state.error} />;
     // }
-    console.log('datossnjsjnjs: ',this.state.data)
+
+
     return (
       <React.Fragment>
 

@@ -22,6 +22,10 @@ render(){
         return null;
     }
 
+    if (datadic === null){
+        return null;
+    }
+
     // Validacion variables boleanas eje Y 
     // var EjeY = [];
 
@@ -41,7 +45,8 @@ render(){
 
 
 // condición que recibe la variable del checkbox y crear el array para la grafica
-    if (datadic.length>0)
+
+    if (datadic.length>0 )
     {
         // variable eje X (Date_Time)
         datadic.map(
