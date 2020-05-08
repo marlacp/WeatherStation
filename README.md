@@ -1,17 +1,8 @@
+# UsoChicamocha
 
+Aplicación web desarrollada en ReactJs, la cual permite ver la información de variables de temperatura de una estación meteorológica úbicada en Boyacá, se pueden visualizar los datos en tablas y gráficas, donde puedes filtrarlos por días o meses según tu necesidad, y puedes descargar datos en archivos csv:
 
-### `npm install`
-
-necesitamos instalar todas las dependencias necesarias para poder correr el proyecto. Lo haremos utilizando npm.
-
-`$ npm install`
-
-Este proceso puede tardar un poco. Lo que esta haciendo es descargando todas las bibliotecas de código que el proyecto necesita.
-Una vez haya concluido, estamos listos para echar a correr el servidor. Lo hacemos con el comando
-
-`$ npm run start`
-
-Cuando el servidor comience, automáticamente va a abrir una pantalla en el navegador con la aplicación.
+`<link>` : http://104.248.53.140/
 
 
 
